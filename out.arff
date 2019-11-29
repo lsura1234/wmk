@@ -1,0 +1,12 @@
+@relation out
+
+@attribute Name {John,Clair,Fancy}
+@attribute Surname {Snow,White,Brown}
+@attribute Age numeric
+@attribute Gender {M,F}
+
+@data
+
+John,Snow,26,M
+Clair,White,33,F
+Fancy,Brown,78,F

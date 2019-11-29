@@ -1,0 +1,32 @@
+@relation out
+
+@attribute SEX {male,female}
+@attribute 'Year of study' {1,2,3,4,5}
+@attribute Branch {IT_KMUTNB,ITI,'Business Computer',comsci,'Computer Education','Computer Engineering',IT_RMUTT,'Educational Information Technology'}
+@attribute 'GPA Before University' {BAD,GOOD}
+@attribute 'Telephone service fee per month' {'more than 900','600 to 900','less than 300','300 to 600'}
+@attribute 'Start use SmartPhone' {'5 to 8 year','more than 8 year','3 to 5 year','less than 3 year'}
+@attribute 'Use Smartphone per day' {'3 to 5 hour','5 to 7 hour','up to 7 hour','less than 3 hour'}
+@attribute 'time to play smartphone in 1 day' {'06.01 PM - 00.00 AM','06.01 AM - 00.00 PM','00.01 PM - 06.00 PM','00.01 AM - 06.00 AM'}
+@attribute 'place to use smartphone' {dorm,home,'computer lab',restaurants,'Around the university ',everywhere}
+@attribute 'use smartphone for search and activity in classroom' {sometimes,always,never}
+@attribute 'use smartphone for search knowledge unknown outside classroom' {sometimes,always,never}
+@attribute 'Use smartphone to take pictures of powerpoint instead of short note' {always,sometimes,never}
+@attribute 'use smartphone for contact and ask about studying with friend' {always,sometimes,never}
+@attribute 'Duration of sneaking of a smartphone in the classroom' {'less than half of class time','half of class time','more than half of class time'}
+@attribute 'The main objective of secretly using a smartphone in the classroom' {'social media',internet,call,'play game',email,entertain}
+@attribute 'The moment when secretly using a smartphone in the classroom' {'Practice Course',lecture,presentation,'group work'}
+@attribute 'Use smartphone for presentations and assignments in front of the class' {sometimes,never,always}
+@attribute 'Use a smartphone to contact and ask teachers about learning matters' {always,never,sometimes}
+@attribute GPA {(-inf-2.5],(2.5-inf)}
+
+@data
+
+male,1,IT_KMUTNB,BAD,'more than 900','5 to 8 year','3 to 5 hour','06.01 PM - 00.00 AM',dorm,sometimes,sometimes,always,always,'less than half of class time','social media','Practice Course',sometimes,always,(-inf-2.5]
+female,2,ITI,GOOD,'600 to 900','more than 8 year','5 to 7 hour','06.01 AM - 00.00 PM',home,always,always,sometimes,sometimes,'half of class time',internet,lecture,never,never,(2.5-inf)
+female,3,'Business Computer',BAD,'less than 300','3 to 5 year','3 to 5 hour','00.01 PM - 06.00 PM','computer lab',never,never,never,never,'more than half of class time',call,presentation,always,sometimes,(-inf-2.5]
+female,4,comsci,BAD,'300 to 600','less than 3 year','up to 7 hour','00.01 AM - 06.00 AM',restaurants,sometimes,sometimes,always,always,'less than half of class time','play game','Practice Course',always,always,(-inf-2.5]
+female,5,'Computer Education',BAD,'more than 900','5 to 8 year','less than 3 hour','06.01 PM - 00.00 AM','Around the university ',sometimes,sometimes,always,always,'less than half of class time',email,'group work',sometimes,always,(-inf-2.5]
+female,5,'Computer Engineering',BAD,'more than 900','5 to 8 year','3 to 5 hour','06.01 PM - 00.00 AM',everywhere,sometimes,sometimes,always,always,'less than half of class time',entertain,'Practice Course',sometimes,always,(-inf-2.5]
+female,5,IT_RMUTT,BAD,'more than 900','5 to 8 year','3 to 5 hour','06.01 PM - 00.00 AM',home,sometimes,sometimes,always,always,'less than half of class time','social media','Practice Course',sometimes,always,(-inf-2.5]
+female,5,'Educational Information Technology',BAD,'more than 900','5 to 8 year','3 to 5 hour','06.01 PM - 00.00 AM',dorm,sometimes,sometimes,always,always,'less than half of class time','social media','Practice Course',sometimes,always,(-inf-2.5]
