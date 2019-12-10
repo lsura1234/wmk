@@ -7,7 +7,7 @@ import jwt from 'jwt-simple'
 const router = new Router();
  router.post('/predict', async(ctx) => {
      const body = get(ctx,'request.body',{})
-     const resp = await predictData(body);
+     const resp = await predictData(body, ctx);
     ctx.status = 200;
     ctx.body = resp
  });

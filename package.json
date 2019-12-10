@@ -5,16 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node_modules/.bin/babel-node index.js"
+    "start": "nodemon node_modules/.bin/babel-node index.js",
+    "migrate:development": "./node_modules/.bin/sequelize db:migrate --config ./config/config.json --env development",
+    "migrate:undo:development": "./node_modules/.bin/sequelize db:migrate:undo --config ./config/config.json --env development",
+    "migrate:test": "export NODE_ENV=test && ./node_modules/.bin/sequelize db:migrate --config sequelize.config.js --env test",
+    "migrate:undo:test": "export NODE_ENV=test && ./node_modules/.bin/sequelize db:migrate:undo:all --config sequelize.config.js --env test",
+    "migration:create": "./node_modules/.bin/sequelize migration:create --config ./config/config.js --name "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@spksoft/koa-decorator": "^1.2.2",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-preset-es2015": "6.24.1",
     "csv-parser": "^2.3.2",
     "csv-writer": "^1.5.0",
+    "dotenv": "^8.2.0",
     "jsonwebtoken": "8.5.1",
     "jwt-simple": "0.5.6",
     "koa": "2.7.0",
