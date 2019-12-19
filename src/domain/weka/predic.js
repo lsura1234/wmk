@@ -239,8 +239,6 @@ const predict = async (body, ctx) => {
     // }
   ];
   Mockdata.push(data);
-  console.log("TCL: data", data);
-
   csvWriter
     .writeRecords(Mockdata)
     .then(() => console.log("The CSV file was written successfully"));
@@ -252,7 +250,6 @@ const predict = async (body, ctx) => {
   cmd =
     'java -classpath "src/domain/weka/weka.jar" weka.classifiers.trees.RandomForest -T "src/domain/weka/out.arff" -l "src/domain/weka/ModelRamdomForest.model" -p 0';
   const res2 = await execShellCommand(cmd);
-  console.log("TCL: res2", res2);
 
   let GPA = res2.substr(430, 70).trim();
   let prob = res2.substr(460, 30).trim();
