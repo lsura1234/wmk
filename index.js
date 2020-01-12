@@ -20,4 +20,4 @@ app.use(
     }),
   )
 app.use(indexRoute.routes());
-const server = app.listen(appConfig.NODE_PORT)
+// const server = app.listen(appConfig.NODE_PORT)
