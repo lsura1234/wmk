@@ -6,6 +6,7 @@ import getCheckList from "../domain/viewHistory/getcheckList";
 import addAdmin from '../domain/admin/add'
 import loginAdmin from '../domain/admin/login'
 import studentList from '../domain/viewHistory/sutudentList'
+import getOneData from '../domain/viewHistory/studentOneData'
 
 const router = new Router();
 router.post("/predict", async ctx => {
@@ -40,6 +41,12 @@ router.post("/admin/login", async ctx => {
 router.post("/studentList",async ctx => {
   const body = get(ctx, "request.body", {});
   const resp = await studentList(ctx, body);
+  ctx.status = 200;
+  ctx.body = resp;
+});
+router.get("/studentList/:studentDataId",async ctx => {
+  const {studentDataId}  = ctx.params
+  const resp = await getOneData(ctx, studentDataId);
   ctx.status = 200;
   ctx.body = resp;
 });
